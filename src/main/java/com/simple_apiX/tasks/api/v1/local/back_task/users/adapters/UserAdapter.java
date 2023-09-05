@@ -2,9 +2,9 @@ package com.simple_apiX.tasks.api.v1.local.back_task.users.adapters;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.stereotype.Service;
-
+import com.simple_apiX.tasks.api.v1.local.Utils.ErrorService;
+import com.simple_apiX.tasks.api.v1.local.Utils.UtilsLocal;
 import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd.User;
 
 
@@ -22,14 +22,33 @@ public class UserAdapter {
 
     public Object findAll()
     {
-        return listBd;
+        try {
+            return listBd;
+        }
+        catch ( Exception e ){
+            UtilsLocal.log( e.getMessage() );
+            return new ErrorService( 
+                "Ha ocurrido un error obteniendo la lista de usuarios", 
+                e.getMessage(), 
+                myClassName
+            );
+        }
     }
 
 
     public Object save( User user )
     {
-        listBd.add( user );
-        return listBd;
+        try {            
+            listBd.add( user );
+            return listBd;
+        }
+        catch ( Exception e ){
+            return new ErrorService( 
+                "Ha ocurrido un error guardando el usuario", 
+                e.getMessage(), 
+                myClassName
+            );
+        }
     }
 
 }

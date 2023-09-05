@@ -2,7 +2,6 @@ package com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.payloads;
 
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 
 public class UserDto {

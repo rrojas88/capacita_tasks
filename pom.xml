@@ -48,7 +48,22 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<!-- Para fecha y hora Colombia(utilidades) -->
+		<dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.14</version>
+        </dependency>
+		<!-- Habilitar Repositories y config de BDs
+		[ Requiere tener config a BD: 
+			dev.pro.., /adapters/, /profile_config/ ]
+		-->
+		<!--
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency> -->
+		
 		<!-- Habilitar metricas: -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -59,8 +74,6 @@
 			<artifactId>micrometer-registry-prometheus</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-		<!-- Para fecha y hora Colombia(utilidades) -->
 
 		<!-- Habilitar Validaciones Dto: -->
 		<dependency>
