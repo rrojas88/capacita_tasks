@@ -58,11 +58,10 @@
 		[ Requiere tener config a BD: 
 			dev.pro.., /adapters/, /profile_config/ ]
 		-->
-		<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency> -->
+		</dependency>
 		
 		<!-- Habilitar metricas: -->
 		<dependency>

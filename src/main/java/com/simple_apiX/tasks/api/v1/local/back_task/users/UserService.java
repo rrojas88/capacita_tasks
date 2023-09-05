@@ -4,8 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.simple_apiX.tasks.api.v1.local.Utils.ErrorService;
+import com.simple_apiX.tasks.api.v1.local.Utils.UtilsService;
 import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.UserAdapter;
-import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd.User;
+import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd1.User;
 import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.payloads.UserDto;
 
 
@@ -38,6 +39,20 @@ public class UserService {
     public Object register( UserDto userDto )
     {
         try {
+            // Log. Neg.: validar si existe el correo:
+            Object respValCorreo = userAdapter.getByEmail( userDto.getEmail() );
+            if( UtilsService.isErrorService( respValCorreo ) ) return respValCorreo;
+
+            User userExist = ( User ) respValCorreo;
+            if( userExist != null ){
+                return new ErrorService( 
+                    "El usuario ya se encuentra registrado", 
+                    "El correo ya se encuentra registrado", 
+                    myClassName,
+                    400
+                );
+            }
+
             User user = new User();
             user.setName( userDto.getName() );
             user.setEmail( userDto.getEmail() );

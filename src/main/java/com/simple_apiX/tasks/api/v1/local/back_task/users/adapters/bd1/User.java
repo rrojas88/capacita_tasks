@@ -1,10 +1,14 @@
-package com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd;
+package com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd1;
+
+import javax.persistence.*;
 
 
-
-
+@Entity
+@Table(name = "users")
 public class User {
     
+    @Id
+	@GeneratedValue( strategy = GenerationType.IDENTITY )
     private Integer id;
 
     private String name;
