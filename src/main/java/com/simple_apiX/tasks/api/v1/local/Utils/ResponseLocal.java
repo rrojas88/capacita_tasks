@@ -53,8 +53,8 @@ public class ResponseLocal {
             this.success = true;
             this.code = 200;
             this.message = message;
-            //this.data = data;
-            this.data = ( data != null ) ? data : false;
+            this.data = data;
+            //this.data = ( data != null ) ? data : false;
             this.setSuccess( 
                 class_path, 
                 payload, 

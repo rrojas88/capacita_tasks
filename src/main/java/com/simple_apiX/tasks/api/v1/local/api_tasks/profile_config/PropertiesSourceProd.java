@@ -1,5 +1,5 @@
 
-package com.simple_apiX.tasks.api.v1.local.back_task.profile_config;
+package com.simple_apiX.tasks.api.v1.local.api_tasks.profile_config;
 
 import org.springframework.context.annotation.*;
 

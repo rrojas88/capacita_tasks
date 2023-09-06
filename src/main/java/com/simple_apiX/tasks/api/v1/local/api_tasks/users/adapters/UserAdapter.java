@@ -1,12 +1,12 @@
-package com.simple_apiX.tasks.api.v1.local.back_task.users.adapters;
+package com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.simple_apiX.tasks.api.v1.local.Utils.ErrorService;
 import com.simple_apiX.tasks.api.v1.local.Utils.UtilsLocal;
-import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd1.User;
-import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd1.UserRepository;
+import com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.bd1.User;
+import com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.bd1.UserRepository;
 
 
 
@@ -26,7 +26,6 @@ public class UserAdapter {
             return resp;
         }
         catch ( Exception e ){
-            UtilsLocal.log( e.getMessage() );
             return new ErrorService( 
                 "Ha ocurrido un error obteniendo la lista de usuarios", 
                 e.getMessage(), 
@@ -43,7 +42,6 @@ public class UserAdapter {
             return resp;
         }
         catch ( Exception e ){
-            UtilsLocal.log( e.getMessage() );
             return new ErrorService( 
                 "Ha ocurrido un error consultando usuarios por correo", 
                 e.getMessage(), 

@@ -1,5 +1,5 @@
 
-package com.simple_apiX.tasks.api.v1.local.back_task.adapters;
+package com.simple_apiX.tasks.api.v1.local.api_tasks.adapters;
 
 
 import java.util.*;
@@ -21,17 +21,17 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories(
     entityManagerFactoryRef = "postgresEntityManagerFactory", 
     transactionManagerRef = "postgresTransactionManager"
-    , basePackages =  "com.simple_apiX.tasks.api.v1.local.back_task"
+    , basePackages =  "com.simple_apiX.tasks.api.v1.local.api_tasks"
     , includeFilters = {
-        @ComponentScan.Filter(type = FilterType.REGEX, pattern = "com.simple_apiX.tasks.api.v1.local.back_task.*.adapters.bd1.*")
+        @ComponentScan.Filter(type = FilterType.REGEX, pattern = "com.simple_apiX.tasks.api.v1.local.api_tasks.*.adapters.bd1.*")
     }
     , excludeFilters = {
-        //@ComponentScan.Filter(type = FilterType.REGEX, pattern = {"com.simple_apiX.tasks.api.v1.local.back_task.*.adapters.bd2.*"})
+        //@ComponentScan.Filter(type = FilterType.REGEX, pattern = {"com.simple_apiX.tasks.api.v1.local.api_tasks.*.adapters.bd2.*"})
     }
 )
 public class Bd1PostgresConfig {
 
-        public String packages_models = "com.simple_apiX.tasks.api.v1.local.back_task.*.adapters.bd1";
+        public String packages_models = "com.simple_apiX.tasks.api.v1.local.api_tasks.*.adapters.bd1";
     
         @Autowired
         public Environment env;

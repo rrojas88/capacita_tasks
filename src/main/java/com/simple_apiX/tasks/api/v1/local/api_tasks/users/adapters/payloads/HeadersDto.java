@@ -1,4 +1,4 @@
-package com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.payloads;
+package com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.payloads;
 
 import javax.validation.constraints.NotBlank;
 

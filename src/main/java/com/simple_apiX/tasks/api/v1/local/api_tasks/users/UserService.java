@@ -1,13 +1,13 @@
-package com.simple_apiX.tasks.api.v1.local.back_task.users;
+package com.simple_apiX.tasks.api.v1.local.api_tasks.users;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.simple_apiX.tasks.api.v1.local.Utils.ErrorService;
 import com.simple_apiX.tasks.api.v1.local.Utils.UtilsService;
-import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.UserAdapter;
-import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd1.User;
-import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.payloads.UserDto;
+import com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.UserAdapter;
+import com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.bd1.User;
+import com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.payloads.UserDto;
 
 
 

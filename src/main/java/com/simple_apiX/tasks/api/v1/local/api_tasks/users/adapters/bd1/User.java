@@ -1,4 +1,4 @@
-package com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.bd1;
+package com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.bd1;
 
 import javax.persistence.*;
 

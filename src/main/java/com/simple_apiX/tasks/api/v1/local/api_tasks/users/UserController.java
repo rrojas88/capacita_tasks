@@ -1,4 +1,4 @@
-package com.simple_apiX.tasks.api.v1.local.back_task.users;
+package com.simple_apiX.tasks.api.v1.local.api_tasks.users;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,13 +21,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.simple_apiX.tasks.api.v1.local.Utils.ResponseLocal;
 import com.simple_apiX.tasks.api.v1.local.Utils.UtilsLocal;
-import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.payloads.HeadersDto;
-import com.simple_apiX.tasks.api.v1.local.back_task.users.adapters.payloads.UserDto;
+import com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.payloads.HeadersDto;
+import com.simple_apiX.tasks.api.v1.local.api_tasks.users.adapters.payloads.UserDto;
 
 
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin
 public class UserController {
     
     private String myClassName = UserController.class.getName();
