@@ -42,6 +42,7 @@ public class UserAdapter {
             return resp;
         }
         catch ( Exception e ){
+			UtilsLocal.log("... Error UserAdapter: ");UtilsLocal.log(e.getMessage());
             return new ErrorService( 
                 "Ha ocurrido un error consultando usuarios por correo", 
                 e.getMessage(), 
